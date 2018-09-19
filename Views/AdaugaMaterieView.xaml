@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Catalog.Views.AdaugaMaterieView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Catalog.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <TextBlock Name="Nume" Text="Nume:" />
+        <TextBox Name="NumeMaterie" Text="{Binding Nume}" />
+        <TextBlock Name="specializari" Text="Specializari" />
+        <CheckBox Name="mateInfo" Content="Mate Info" IsChecked="{Binding IsMateInfoChecked}"/>
+        <CheckBox Name="bioChimie" Content="Bio Chimie" IsChecked="{Binding IsBioChimieChecked}"/>
+        <CheckBox Name="uman" Content="Uman" IsChecked="{Binding IsUmanChecked}" />
+        <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal">
+            
+        <Button Name="cancel" Content="Cancel" />
+        <Button  Content="OK" Command="{Binding OkCommand}" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>
