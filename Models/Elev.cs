@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Catalog
 {
-    // TODO Tema de completat restul proprietatilor(din enunt)
     class Elev
     {
+        public string Nume { get; set; }
+        public string Prenume { get; set; }
+        public int Varsta { get; set; }
+        public SpecializareEnum Specializare { get; set; } 
         List<NotaPerMaterie> Note { get; set; }
+
+
     }
 }

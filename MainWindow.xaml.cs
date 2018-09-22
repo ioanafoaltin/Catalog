@@ -27,31 +27,54 @@ namespace Catalog
         {
             InitializeComponent();
 
-            Materie matematica = new Materie();
-            matematica.Nume ="matematica";
-            //matematica.Specializari = new List<SpecializareEnum>();
+            /* Materie matematica = new Materie();
+             matematica.Nume ="matematica";
+             //matematica.Specializari = new List<SpecializareEnum>();
 
-            matematica.Specializari.Add(SpecializareEnum.MateInfo);
-            matematica.Specializari.Add(SpecializareEnum.BioChimie);
+             matematica.Specializari.Add(SpecializareEnum.MateInfo);
+             matematica.Specializari.Add(SpecializareEnum.BioChimie);
 
-            MaterieViewModel matematicaVM = new MaterieViewModel(matematica);
+             MaterieViewModel matematicaVM = new MaterieViewModel(matematica);
 
-            // am setat "sursa de date [aka DataContext]" al viewului meu. 
-            viewultMEu.DataContext = matematicaVM;
+             // am setat "sursa de date [aka DataContext]" al viewului meu. 
+             viewultMEu.DataContext = matematicaVM;*/
+
+            DataContext = new MainViewModel();
         }
 
         private void adaugaMaterie_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
+
+        private void adaugaProfesor_Click(object sender, RoutedEventArgs e)
+        {
             Window fereastraNoua = new Window();
-            fereastraNoua.Title = "Creaza materie noua";
+            fereastraNoua.Title = "Adauga profesor";
             fereastraNoua.MinWidth = 50;
             fereastraNoua.MinHeight = 50;
-            fereastraNoua.Width = 150;
-            fereastraNoua.Height = 150;
-            fereastraNoua.Content = new AdaugaMaterieView();
-            fereastraNoua.DataContext = new AdaugaMaterieViewModel();
+            fereastraNoua.Width = 300;
+            fereastraNoua.Height = 300;
+            fereastraNoua.Content = new AdaugaProfesorView();
+            fereastraNoua.DataContext = new AdaugaProfesorViewModel();
 
             fereastraNoua.ShowDialog();
         }
+
+        private void adaugaElev_Click(object sender, RoutedEventArgs e)
+        {
+            Window fereastraNoua = new Window();
+            fereastraNoua.Title = "Adauga Elev";
+            fereastraNoua.MinWidth = 50;
+            fereastraNoua.MinHeight = 50;
+            fereastraNoua.Width = 300;
+            fereastraNoua.Height = 300;
+            fereastraNoua.Content = new AdaugaElevView();
+            fereastraNoua.DataContext = new AdaugaElevViewModel();
+
+            fereastraNoua.ShowDialog();
+        }
+
+        
     }
 }

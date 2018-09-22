@@ -7,12 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel>
-        <TextBlock Name="materieLable" Text="Materie: " />
-        <TextBlock Name="materieValoare" Text="{Binding Nume}" />
-        <TextBlock Name="specializareLable" Text="Specializare:" />
-        <TextBlock Name="specializareValoare" Text="{Binding Specializari}" />
-
-
-
+        <TextBlock Name="materieLable" Text="Materie: " Margin="5" />
+        <TextBlock Name="materieValoare" Text="{Binding Nume}" Margin="5" />
+        <TextBlock Name="specializareLable" Text="Specializare:" Margin="5" />
+        <TextBlock Name="specializareValoare" Text="{Binding Specializari}" Margin="5" />
     </StackPanel>
 </UserControl>

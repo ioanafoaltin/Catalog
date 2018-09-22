@@ -1,9 +1,11 @@
-﻿using Prism.Commands;
+﻿using Catalog.ViewModel;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Catalog.ViewModels
@@ -57,6 +59,10 @@ namespace Catalog.ViewModels
 
         public DelegateCommand OkCommand { get; set; }
 
+        public MainViewModel MainViewModel { get; set; }
+
+        public Window Window { get; set; }
+
         public AdaugaMaterieViewModel()
         {
             OkCommand = new DelegateCommand(OKCommand_Execute, OKCommand_CanExecute);
@@ -64,7 +70,17 @@ namespace Catalog.ViewModels
 
         private void OKCommand_Execute()
         {
+            //MessageBox.Show("Cartofi Prajiti");
 
+            Materie noua = new Materie();
+            noua.Nume = Nume;
+
+            MaterieViewModel adaugaMat = new MaterieViewModel(noua);
+
+
+            MainViewModel.Materii.Add(adaugaMat);
+
+            Window.Close();
         }
 
         private bool OKCommand_CanExecute()

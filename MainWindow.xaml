@@ -8,10 +8,31 @@
         xmlns:views="clr-namespace:Catalog.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    
+
     <Grid>
-        <views:MaterieView x:Name="viewultMEu"/>
-        <Button Name="adaugaMaterie" Content="Adauga Materie" Click="adaugaMaterie_Click" MinWidth="50" MinHeight="25" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+        <ListBox ItemsSource="{Binding Materii}">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nume}"/>
+                        <TextBlock Text="{Binding Specializare}"/>
+
+                    </StackPanel>
+                </DataTemplate>
+                    
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+
+        <StackPanel>
+            <!--ctrl E C -shortcut coment -->
+            <!--ctrl E U -decomentat--><!-- comanda COMMAND asteapta ceva cu comand-->
+            <Button Name="adaugaMaterie" Content="Adauga Materie" Command="{Binding AdaugaMaterieComand}" MinWidth="50" MinHeight="25" Width="105" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" />
+            <Button Name="adaugaProfesor" Content="Adauga Profesor" Click="adaugaProfesor_Click" MinWidth="50" MinHeight="25" Width="105" Height="25" HorizontalAlignment="Right" Margin="5" />
+            <Button Name="adaugaElev" Content="Adauga Elev" Click="adaugaElev_Click" MinWidth="50" MinHeight="25" Width="105" Height="25" HorizontalAlignment="Right" Margin="5"/>
+        </StackPanel>
     </Grid>
-    
+
 </Window>

@@ -73,10 +73,19 @@
     <Compile Include="Models\NotaEnum.cs" />
     <Compile Include="Models\NotaPerMaterie.cs" />
     <Compile Include="Models\SpecializareEnum.cs" />
+    <Compile Include="ViewModels\AdaugaElevViewModel.cs" />
     <Compile Include="ViewModels\AdaugaMaterieViewModel.cs" />
+    <Compile Include="ViewModels\AdaugaProfesorViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MaterieViewModel.cs" />
+    <Compile Include="Views\AdaugaElevView.xaml.cs">
+      <DependentUpon>AdaugaElevView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdaugaMaterieView.xaml.cs">
       <DependentUpon>AdaugaMaterieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdaugaProfesorView.xaml.cs">
+      <DependentUpon>AdaugaProfesorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MaterieView.xaml.cs">
       <DependentUpon>MaterieView.xaml</DependentUpon>
@@ -94,7 +103,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AdaugaElevView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AdaugaMaterieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdaugaProfesorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

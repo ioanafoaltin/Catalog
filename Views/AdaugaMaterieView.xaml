@@ -5,18 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Catalog.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" MinHeight="200" MinWidth="200">
     <StackPanel>
-        <TextBlock Name="Nume" Text="Nume:" />
-        <TextBox Name="NumeMaterie" Text="{Binding Nume}" />
-        <TextBlock Name="specializari" Text="Specializari" />
-        <CheckBox Name="mateInfo" Content="Mate Info" IsChecked="{Binding IsMateInfoChecked}"/>
-        <CheckBox Name="bioChimie" Content="Bio Chimie" IsChecked="{Binding IsBioChimieChecked}"/>
-        <CheckBox Name="uman" Content="Uman" IsChecked="{Binding IsUmanChecked}" />
-        <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal">
+        <TextBlock Name="Nume" Text="Nume:" Margin="5" />
+        <TextBox Name="NumeMaterie" Text="{Binding Nume}" Margin="5" />
+        <TextBlock Name="specializari" Text="Specializari" Margin="5" />
+        <CheckBox Name="mateInfo" Content="Mate Info" IsChecked="{Binding IsMateInfoChecked}" Margin="5" />
+        <CheckBox Name="bioChimie" Content="Bio Chimie" IsChecked="{Binding IsBioChimieChecked}" Margin="5" />
+        <CheckBox Name="uman" Content="Uman" IsChecked="{Binding IsUmanChecked}" Margin="5" />
+        <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal" Margin="5">
             
-        <Button Name="cancel" Content="Cancel" />
-        <Button  Content="OK" Command="{Binding OkCommand}" />
+        <Button Name="cancel" Content="Cancel" Margin="5" Height="25" Width="40" IsCancel="True"/>
+        <Button  Content="OK" Command="{Binding OkCommand}" Margin="5" Height="25" Width="40" IsDefault="True"  />
         </StackPanel>
     </StackPanel>
 </UserControl>
